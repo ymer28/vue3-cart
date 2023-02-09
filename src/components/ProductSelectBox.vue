@@ -5,7 +5,7 @@
 			v-model="selected" 
 			@change="getSpecificCategoryProduct()"
 		>
-			<option v-for="(option, index) in options" :key="index" :value="option.value">
+			<option v-for="(option, index) in updateOptions" :key="index" :value="option.value">
 					{{ option.text }}
 			</option>
     </select>
@@ -18,17 +18,23 @@ export default {
 	data() {
 		return {
 			selected: "0",
-			options: [
-        { text: 'All', value: '0' },
-        { text: 'Single Use Ticket', value: '1' },
-        { text: 'Single Use Ticket and Parking', value: '2' },
-        { text: 'Plan', value: '3' }
-      ]
+			options: [],
 		}
 	},
 	methods: {
 		getSpecificCategoryProduct() {
 			this.$emit('setFilterValue', this.selected);
+		}
+	},
+	computed: {
+		updateOptions() {
+				this.options = [
+				{ text: this.$t("all"), value: '0' },
+				{ text: this.$t("singleUseTicket"), value: '1' },
+				{ text: this.$t("singleUseTicketMore"), value: '2' },
+				{ text: this.$t("pass"), value: '3' }
+			];
+			return this.options;
 		}
 	}
 }

@@ -2,33 +2,38 @@
   <div class="container">
     <the-menu>
       <btn 
-        btnColor="btn btn-small btn-info btn-cart"
+        btnColor="btn btn-small btn-cart"
         :cartIcon="true"
         @click="moveToCart()"
       >
-        {{ !isMobileView ? "Cart" : "" }}
+        {{ !isMobileView ? $t("cart") : "" }}
         <span class="btn-circle" v-if="store.hasProduct">
            {{ store.cartProductsNumber }}
         </span>
       </btn>
     </the-menu>
-      <router-view></router-view>
+    <router-view></router-view>
+    <the-footer/>
+    
+    
   </div>
 
 </template>
 <script>
 import TheMenu from './components/layout/TheMenu.vue'
+import TheFooter from './components/layout/TheFooter.vue'
 import btn from './components/layout/Btn.vue'
 import cartMixin from './mixins/cart'
 export default {
   mixins: [cartMixin],
   components: { 
-    TheMenu, 
+    TheMenu,
+    TheFooter, 
     btn,
   },
   methods: {
     moveToCart() {
-      this.$router.push({name: 'Cart'});
+      this.$router.push({ name: 'Cart' });
     }
   },
   created() {
@@ -62,5 +67,5 @@ export default {
     align-items: center;
     justify-content: center;
   }
-  
+
 </style>

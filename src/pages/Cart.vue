@@ -2,7 +2,7 @@
   <!-- <div v-if="hasProduct()" class="checkout-box"> -->
   <div v-if="store.hasProduct" class="checkout-box">
     <ul class="checkout-list">
-      <h2>MY CART</h2>
+      <h2>{{ $t("myCart") }}</h2>
       <transition-group name="fade">
       <li v-for="(product, index) in cart" :key="index" class="checkout-product">
         <img :src=displayProductsPic(product.thumbnail_url) alt="" class="product-image">
@@ -12,7 +12,7 @@
       </li>
       <li class="checkout-total">
         <img src="../assets/images/cart.svg" alt="Cart Icon" class="total-image">
-        <h3 class="product-name">TOTAL</h3>
+        <h3 class="product-name">{{ $t("total") }}</h3>
         <span class="product-price">{{ getTotalPrice(cart) }} </span>
       </li>
       </transition-group>
@@ -29,7 +29,7 @@
         <btn btnColor="btn btn-small btn-purchase"
           @click.native="moveToMainPage()"
         >
-          Back
+          {{ $t("back") }}
         </btn>
       </li>
     </ul>
@@ -37,7 +37,7 @@
   </div>
   <div v-else class="checkout-box">
     <ul class="checkout-list">
-        <h2>MY CART</h2>
+        <h2>{{ $t("myCart") }}</h2>
       <transition-group name="fade">
       <li v-for="(product, index) in cart" :key="index" class="checkout-product">
         <img :src=displayProductsPic(product.thumbnail_url) alt="" class="product-image">
@@ -47,7 +47,7 @@
       </li>
       <li class="checkout-total">
         <img src="../assets/images/cart.svg" alt="Cart Icon" class="total-image">
-        <h3 class="product-name">TOTAL</h3>
+        <h3 class="product-name">{{ $t("total") }}</h3>
         <span class="product-price">{{ getTotalPrice(cart) }} </span>
       </li>
       </transition-group>
@@ -57,7 +57,7 @@
         <btn btnColor="btn btn-small btn-purchase"
           @click.native="moveToMainPage()"
         >
-          Back
+          {{ $t("back") }}
         </btn>
       </li>
     </ul>

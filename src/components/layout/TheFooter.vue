@@ -1,23 +1,33 @@
 <template>
-  <header class="header">
+  <footer class="footer">
     <nav class="nav">
       <ul class="nav-links">
         <li class="link">
-          <router-link to="/">{{ $t("mainTitle") }}</router-link>
+          <flag iso="fr" @click="changeLocalLanguage('fr')"/>
+        </li>
+        <li class="link">
+          <flag iso="us" @click="changeLocalLanguage('en')"/>
+        </li>
+        <li class="link">
+          <flag iso="kr" @click="changeLocalLanguage('kr')"/>
         </li>
       </ul>
     </nav>
-    <slot></slot>
-  </header>
+  </footer>
 </template>
 
 <script>
 export default {
+  methods: {
+    changeLocalLanguage(language) {
+      this.$i18n.locale = language;
+    }
+  }
 };
 </script>
 
 <style scoped>
-  .header {
+  .footer {
     width: 100%;
     height: 70px;
     background-color: #333333;
@@ -28,11 +38,7 @@ export default {
     align-items: center;
   }
 
-  .nav {
-    width: 90%;
-  }
-
-  .nav-links {
+   .nav-links {
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -41,10 +47,5 @@ export default {
   .link {
     list-style: none;
     padding: 0 2em;
-  }
-
-  .link a {
-    color: #fff;
-    text-decoration: none;
   }
 </style>

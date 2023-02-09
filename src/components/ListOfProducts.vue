@@ -14,7 +14,7 @@
           :cartIcon="true"
           @click.native="addProductToCart(product)"
       >
-        {{ !isMobileView ? "Cart" : "" }}
+        {{ !isMobileView ? $t("cart") : "" }}
       </btn>
     </li>
   </ul>

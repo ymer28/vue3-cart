@@ -46,4 +46,11 @@ export default {
     margin-left: .5em;
   }
 
+   /* Style for tablets*/
+  @media (min-width: 40rem) {
+    .btn-small {
+      width: 200px;
+    }
+  }
+
 </style>

@@ -42,7 +42,6 @@ export default {
 			try {
         let apiUrl = "https://test-feed.airweb.workers.dev/products"+ "/" + this.$route.params.productId;
 				const { data } = await axios.get(apiUrl);
-        // data.price = this.convertPrice(data.price);
 				this.product = data;
 			} catch (error) {
 				console.log("getSpecificProduct - method", error);
