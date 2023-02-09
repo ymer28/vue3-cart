@@ -13,7 +13,7 @@
         :cartIcon="true"
         @click.native="addProductToCart(product)"
       >
-        {{ !isMobileView ? "Buy now" : "" }}
+        {{ !isMobileView ? $t("buyNow") : "" }}
       </btn>
     </div>
   </div>
@@ -124,7 +124,7 @@ export default {
     }
 
     .product-box button {
-      width: 300px;
+      width: 350px;
       margin: .3em 0;
     }
   }
