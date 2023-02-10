@@ -7,7 +7,8 @@ Shopping mall project with :
  
 The project also includes a resuable component (Btn).
 
-This project has been created using: 
+This project has been created using:
+- Vue 3
 - Pinia
 - Axios
 - Vue-router
