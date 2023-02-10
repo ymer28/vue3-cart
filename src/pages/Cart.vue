@@ -134,10 +134,11 @@ export default {
 
   .product-name {
     box-sizing: border-box;
+    font-size: 0.8em;
   }
 
   .product-price {
-    font-size: 1.2em;
+    font-size: 0.8em;
     font-weight: bold;
   }
 
@@ -149,6 +150,17 @@ export default {
     background-color: #E0E0E0;
     color: #fff;
     cursor: pointer;
+  }
+
+   /* Style for tablets*/ 
+  @media (min-width: 40rem) {
+    .product-price {
+      font-size: 1.2em;
+    }
+
+    .product-name {
+      font-size: 1.2em;
+    }
   }
 
 </style>
