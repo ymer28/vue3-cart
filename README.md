@@ -29,14 +29,11 @@ Cart page in English (desktop version)
 Detail product page in English (desktop version)
 ![image](https://user-images.githubusercontent.com/82145186/218027800-17dbcc4d-0dc7-4d60-a695-ef7412558cb2.png)
 
-Main page in Korean (mobile version)
-![image](https://user-images.githubusercontent.com/82145186/218028246-24e4aa86-53b7-46c9-adbf-2865e5de8959.png)
+Main page in French (mobile version)
+![image](https://user-images.githubusercontent.com/82145186/218031973-927b8e88-2341-4ca5-8cae-6cf151f3b93f.png)
 
 Cart page in French (mobile version)
-![image](https://user-images.githubusercontent.com/82145186/218028483-c00d9c92-9c73-4c12-aacf-df66f27c848d.png)
-
-
-
+![image](https://user-images.githubusercontent.com/82145186/218031823-e621ff13-e83e-4135-a513-68cb134a9d3c.png)
 
 ## Recommended IDE Setup
 
