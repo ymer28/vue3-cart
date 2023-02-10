@@ -3,13 +3,13 @@
     <nav class="nav">
       <ul class="nav-links">
         <li class="link">
-          <flag iso="fr" @click="changeLocalLanguage('fr')"/>
+          <flag iso="fr" @click="changeLocalLanguage('fr')" class="flag"/>
         </li>
         <li class="link">
-          <flag iso="us" @click="changeLocalLanguage('en')"/>
+          <flag iso="us" @click="changeLocalLanguage('en')" class="flag"/>
         </li>
         <li class="link">
-          <flag iso="kr" @click="changeLocalLanguage('kr')"/>
+          <flag iso="kr" @click="changeLocalLanguage('kr')" class="flag"/>
         </li>
       </ul>
     </nav>
@@ -47,5 +47,8 @@ export default {
   .link {
     list-style: none;
     padding: 0 2em;
+  }
+  .flag:hover {
+    cursor: pointer;
   }
 </style>

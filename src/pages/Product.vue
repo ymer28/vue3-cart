@@ -9,7 +9,7 @@
       <span class="product-price">{{ convertPrice(product.price) }}</span>
       <btn
 
-        btnColor="btn btn-large btn-purchase"
+        btnColor="btn btn-large btn-general"
         :cartIcon="true"
         @click.native="addProductToCart(product)"
       >

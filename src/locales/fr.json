@@ -4,5 +4,10 @@
   "myCart": "Mon Pannier",
   "total": "Total",
   "back": "Retour",
-	"buyNow": "Achète maintenant"
+	"buyNow": "Achète maintenant",
+  "all": "Tous les produits",
+  "singleUseTicket": "Ticket Unique",
+  "singleUseTicketMore": "Ticket Unique et Parking",
+  "pass": "Abonnement",
+	"buy": "Acheter"
 }

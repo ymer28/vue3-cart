@@ -34,11 +34,17 @@ export default {
   .btn-large {
     padding: .7em 5em;
   }
-  .btn-purchase {
+  .btn-general {
     background-color: #000000;
   }
   .btn-cart {
     background-color: #4b4444;
+  }
+  .btn-disabled {
+    background-color: #7c7777;
+  }
+  .btn-disabled:hover {
+    cursor: not-allowed;
   }
 
   .btn img {

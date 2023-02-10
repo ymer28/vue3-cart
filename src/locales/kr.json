@@ -4,5 +4,10 @@
   "myCart": "내 장바구니",
   "total": "합계",
   "back": "뒤로",
-  "buyNow": "바로 구매"
+  "buyNow": "바로 구매",
+  "all": "전체 보기",
+  "singleUseTicket": "1회용 교통카트",
+  "singleUseTicketMore": "1회용 교통카트 와 주차",
+  "pass": "페스",
+  "buy": "구매하기"
 }

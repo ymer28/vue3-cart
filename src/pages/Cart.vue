@@ -1,6 +1,5 @@
 <template>
-  <!-- <div v-if="hasProduct()" class="checkout-box"> -->
-  <div v-if="store.hasProduct" class="checkout-box">
+  <div class="checkout-box">
     <ul class="checkout-list">
       <h2>{{ $t("myCart") }}</h2>
       <transition-group name="fade">
@@ -8,7 +7,7 @@
         <img :src=displayProductsPic(product.thumbnail_url) alt="" class="product-image">
         <h3 class="product-name">{{ product.label }}</h3>
         <span class="product-price">{{ convertPrice(product.price) }} </span>
-        <!-- <button class="product-remove" @click="remove(index)">X</button> -->
+        <button class="product-remove" @click="removeProduct(index)">X</button>
       </li>
       <li class="checkout-total">
         <img src="../assets/images/cart.svg" alt="Cart Icon" class="total-image">
@@ -19,48 +18,21 @@
     </ul>
     <ul class="checkout-action">
       <li class="checkout-btn">
-        <btn btnColor="btn btn-small btn-purchase"
+        <btn :btnColor="setButtonClass"
+          :disabled = "!store.hasProduct"
           @click.native="purchaseProducts()"
         >
-          Pay
+          {{ $t("buy") }}
         </btn>
       </li>
       <li class="checkout-btn">
-        <btn btnColor="btn btn-small btn-purchase"
+        <btn btnColor="btn btn-small btn-general"
           @click.native="moveToMainPage()"
         >
           {{ $t("back") }}
         </btn>
       </li>
-    </ul>
-    
-  </div>
-  <div v-else class="checkout-box">
-    <ul class="checkout-list">
-        <h2>{{ $t("myCart") }}</h2>
-      <transition-group name="fade">
-      <li v-for="(product, index) in cart" :key="index" class="checkout-product">
-        <img :src=displayProductsPic(product.thumbnail_url) alt="" class="product-image">
-        <h3 class="product-name">{{ product.label }}</h3>
-        <span class="product-price">{{ convertPrice(product.price) }} </span>
-        <!-- <button class="product-remove" @click="remove(index)">X</button> -->
-      </li>
-      <li class="checkout-total">
-        <img src="../assets/images/cart.svg" alt="Cart Icon" class="total-image">
-        <h3 class="product-name">{{ $t("total") }}</h3>
-        <span class="product-price">{{ getTotalPrice(cart) }} </span>
-      </li>
-      </transition-group>
-    </ul>
-    <ul class="checkout-action">
-      <li class="checkout-btn">
-        <btn btnColor="btn btn-small btn-purchase"
-          @click.native="moveToMainPage()"
-        >
-          {{ $t("back") }}
-        </btn>
-      </li>
-    </ul>
+    </ul> 
   </div>
 </template>
 
@@ -78,10 +50,15 @@ export default {
   },
   methods: {
     purchaseProducts() {
-      alert("not developed yet");
+      alert("Not developed");
     },
     moveToMainPage() {
       this.$router.push({name: "AllProducts"});
+    },
+  },
+  computed: {
+    setButtonClass() {
+      return this.store.hasProduct ? "btn btn-small btn-general" : "btn btn-small btn-disabled"; 
     }
   },
   mounted() {
@@ -172,25 +149,6 @@ export default {
     background-color: #E0E0E0;
     color: #fff;
     cursor: pointer;
-  }
-
-  .total {
-    font-size: 2em;
-    font-weight: bold;
-    align-self: flex-end;
-  }
-
-  .checkout-message {
-    font-size: 1.5em;
-  }
-
-  .fade-enter-active, .fade-leave-active {
-    transition: all .5s;
-  }
-
-  .fade-enter, .fade-leave-to {
-    transform: translateX(-40px);
-    opacity: 0;
   }
 
 </style>

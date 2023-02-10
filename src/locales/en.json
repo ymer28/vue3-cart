@@ -4,5 +4,10 @@
   "myCart": "My Cart",
   "total": "Total",
   "back": "Back",
-  "buyNow": "Buy now"
+  "buyNow": "Buy now",
+  "all": "All Products",
+  "singleUseTicket": "Single Use Ticket",
+  "singleUseTicketMore": "Single Use Ticket and Parking",
+  "pass": "Pass",
+  "buy": "Buy"
 }

@@ -7,7 +7,6 @@ export default {
       store: useCartStore()
     }
 	},
-
 	methods: {
 		addProductToCart(product) {
       this.store.$patch((state) => {
@@ -24,7 +23,12 @@ export default {
         total += product.price;
       }
       return this.convertPrice(total);
-    }
+		},
+		removeProduct(index) {
+			this.store.$patch((state) => {
+				state.cart.splice(index, 1);
+      });
+		}
 	},
 
 }
